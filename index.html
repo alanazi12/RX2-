@@ -1,0 +1,76 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>discord.gg/as22Z93U33</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('https://i.pinimg.com/originals/51/ae/a3/51aea3393b8234a1e69d8713a0a58bc3.gif') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Courier New', Courier, monospace;
+            color: #18810e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            text-align: center;
+        }
+        .image-container img {
+            width: 750px; 
+            height: auto;
+            border: 2px solid #0044ff; 
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(23, 146, 11, 0.7); 
+        }
+        .info {
+            margin-top: 20px;
+            font-size: 1.5em;
+            color: #18810e; 
+            text-shadow: 0px 0px 8px #18810e, 0px 0px 15px #18810e, 0px 0px 25px #18810e; 
+            letter-spacing: 4.5px; 
+            white-space: pre-wrap;
+        }
+        .text {
+            margin-top: 20px;
+            font-size: 3em; 
+            color: #18810e; 
+            text-shadow: 0px 0px 8px #18810e, 0px 0px 15px #18810e, 0px 0px 25px #18810e; 
+            letter-spacing: 4.5px; 
+        }
+    </style>
+</head>
+<body>
+ <div class="image-container">
+    <img src="https://media.discordapp.net/attachments/1418576811641667735/1418588796177354883/cc303e9de9e54d9f.png?ex=68d93745&is=68d7e5c5&hm=d93dd35131c3b4c8f1fe26e60fb18cd0e43607f9983e961f1356739246d7d2e6&=&format=webp&quality=lossless&width=1633&height=919" alt="Discord Image">
+</div>
+    <audio autoplay loop>
+        <source src="aa.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+     <div class="text">RX2 تم بعص السيرفر بنجاح من تيم</div>
+    <div class="info" id="ip-info">
+        <strong>IP: <span id="ip"></span></strong><br>
+        <span><strong>City:</strong> <span id="city"></span></span><br>
+        <span><strong>Region:</strong> <span id="region"></span></span><br>
+        <span><strong>Country:</strong> <span id="country"></span></span><br>
+        <span><strong>Location:</strong> <span id="loc"></span></span><br>
+        <span><strong>Organization:</strong> <span id="org"></span></span><br>
+        <span><strong>Timezone:</strong> <span id="timezone"></span></span>
+    </div>
+    <div class="text">GG : يرسل تحياته Slo  : discord.gg/as22Z93U33</div>
+
+    <script>
+         fetch('https://ipinfo.io/json')
+        .then(response => response.json())
+        .then(data => {
+            delete data.readme;
+            const infoDiv = document.getElementById('ip-info');
+            infoDiv.textContent = JSON.stringify(data, null, 2);
+        });
+    </script>
+</body>
+</html>
